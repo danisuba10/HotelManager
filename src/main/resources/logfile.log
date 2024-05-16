@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-05-16T20:43:27.612235700Z</date>
+  <millis>1715892207612</millis>
+  <nanos>235700</nanos>
+  <sequence>3</sequence>
+  <logger>HotelService</logger>
+  <level>INFO</level>
+  <class>com.hotelmanager.service.LogService</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>[Thu May 16 23:43:27 EEST 2024] Unrecognized field "roomNumber" (class com.hotelmanager.domain.Room), not marked as ignorable (4 known properties: "number", "type", "id", "price"])
+ at [Source: (File); line: 9, column: 18] (through reference chain: java.lang.Object[][0]-&gt;com.hotelmanager.domain.Hotel["rooms"]-&gt;java.util.HashSet[0]-&gt;com.hotelmanager.domain.Room["roomNumber"])</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-05-16T20:45:03.661264100Z</date>
+  <millis>1715892303661</millis>
+  <nanos>264100</nanos>
+  <sequence>3</sequence>
+  <logger>HotelService</logger>
+  <level>INFO</level>
+  <class>com.hotelmanager.service.LogService</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>[Thu May 16 23:45:03 EEST 2024] Unrecognized field "isAvailable" (class com.hotelmanager.domain.Room), not marked as ignorable (4 known properties: "price", "type", "id", "roomNumber"])
+ at [Source: (File); line: 12, column: 20] (through reference chain: java.lang.Object[][0]-&gt;com.hotelmanager.domain.Hotel["rooms"]-&gt;java.util.HashSet[0]-&gt;com.hotelmanager.domain.Room["isAvailable"])</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-05-16T20:46:39.792543400Z</date>
+  <millis>1715892399792</millis>
+  <nanos>543400</nanos>
+  <sequence>3</sequence>
+  <logger>HotelService</logger>
+  <level>INFO</level>
+  <class>com.hotelmanager.service.LogService</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>[Thu May 16 23:46:39 EEST 2024] Unrecognized field "isAvailable" (class com.hotelmanager.domain.Room), not marked as ignorable (5 known properties: "price", "type", "id", "roomNumber", "available"])
+ at [Source: (File); line: 12, column: 20] (through reference chain: java.lang.Object[][0]-&gt;com.hotelmanager.domain.Hotel["rooms"]-&gt;java.util.HashSet[0]-&gt;com.hotelmanager.domain.Room["isAvailable"])</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-05-16T20:49:49.015068100Z</date>
+  <millis>1715892589015</millis>
+  <nanos>68100</nanos>
+  <sequence>3</sequence>
+  <logger>HotelService</logger>
+  <level>INFO</level>
+  <class>com.hotelmanager.service.LogService</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>[Thu May 16 23:49:49 EEST 2024] Unrecognized field "isAvailable" (class com.hotelmanager.domain.Room), not marked as ignorable (5 known properties: "price", "type", "id", "roomNumber", "available"])
+ at [Source: (File); line: 12, column: 20] (through reference chain: java.lang.Object[][0]-&gt;com.hotelmanager.domain.Hotel["rooms"]-&gt;java.util.HashSet[0]-&gt;com.hotelmanager.domain.Room["isAvailable"])</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-05-16T20:55:09.651309500Z</date>
+  <millis>1715892909651</millis>
+  <nanos>309500</nanos>
+  <sequence>3</sequence>
+  <logger>HotelService</logger>
+  <level>INFO</level>
+  <class>com.hotelmanager.service.LogService</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>[Thu May 16 23:55:09 EEST 2024] Unrecognized field "isAvailable" (class com.hotelmanager.domain.Room), not marked as ignorable (5 known properties: "price", "type", "id", "roomNumber", "available"])
+ at [Source: (File); line: 12, column: 20] (through reference chain: java.lang.Object[][0]-&gt;com.hotelmanager.domain.Hotel["rooms"]-&gt;java.util.HashSet[0]-&gt;com.hotelmanager.domain.Room["isAvailable"])</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-05-16T20:57:53.139792500Z</date>
+  <millis>1715893073139</millis>
+  <nanos>792500</nanos>
+  <sequence>3</sequence>
+  <logger>HotelService</logger>
+  <level>INFO</level>
+  <class>com.hotelmanager.service.LogService</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>[Thu May 16 23:57:53 EEST 2024] Unrecognized field "isAvailable" (class com.hotelmanager.domain.Room), not marked as ignorable (5 known properties: "price", "type", "id", "roomNumber", "available"])
+ at [Source: (File); line: 12, column: 20] (through reference chain: java.lang.Object[][0]-&gt;com.hotelmanager.domain.Hotel["rooms"]-&gt;java.util.HashSet[0]-&gt;com.hotelmanager.domain.Room["isAvailable"])</message>
+</record>
+</log>
