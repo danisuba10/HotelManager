@@ -21,4 +21,12 @@ public interface RoomRepository extends CrudRepository<Room, Integer>
                     "WHERE relation.hotelID = :hotelId"
     )
     List<Room> findByHotelId(int hotelId);
+
+    @Query(
+            "SELECT room " +
+                    "FROM Room room " +
+                    "JOIN RoomHotelRelation relation ON room.id = relation.hotelRoomID " +
+                    "WHERE relation.hotelID = :hotelId and room.isAvailable = :available"
+    )
+    List<Room> findByHotelIdAndAvailable(int hotelId, boolean available);
 }
