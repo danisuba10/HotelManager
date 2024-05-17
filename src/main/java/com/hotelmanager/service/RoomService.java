@@ -23,4 +23,9 @@ public class RoomService {
         return roomRepository.findByHotelId(hotelID);
     }
 
+    public List<Room> findByHotelIdAndAvailable(int hotelID, boolean available)
+    {
+        return roomRepository.findByHotelIdAndAvailable(hotelID, available);
+    }
+
 }
