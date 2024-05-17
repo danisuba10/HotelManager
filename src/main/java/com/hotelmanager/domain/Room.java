@@ -21,9 +21,6 @@ public class Room {
     private int price;
     private boolean isAvailable;
 
-    @ManyToMany
-    private Set<Hotel> hotels = new HashSet<>();
-
     public Room(int roomNumber, int type, int price)
     {
         Random rand = new Random();

@@ -18,8 +18,7 @@ public class Hotel {
     @Transient
     private HashSet<Integer> roomIDS;
     @Transient
-    @ManyToMany(mappedBy = "hotels")
-    private HashSet<Room> rooms;
+    private Set<Room> rooms;
 
     public Hotel(int id, String name, float latitude, float longitude, HashSet<Integer> roomIDS, HashSet<Room> rooms)
     {
