@@ -24,6 +24,11 @@ public class HotelService {
         return this.hotelRepository.findById(id);
     }
 
+    public Hotel findByRoom(int roomID)
+    {
+        return hotelRepository.getHotelByRoom(roomID);
+    }
+
     public List<Hotel> findAll()
     {
         List<Hotel> result = new ArrayList<Hotel>();

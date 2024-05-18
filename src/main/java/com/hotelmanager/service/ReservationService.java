@@ -43,7 +43,7 @@ public class ReservationService {
                                      LocalDateTime bStartDate, LocalDateTime bEndDate)
     {
 
-        return aStartDate.isBefore(bEndDate) || aEndDate.isAfter(bStartDate);
+        return aStartDate.isAfter(bEndDate) || aEndDate.isBefore(bStartDate);
     }
 
     public boolean isAvailable(int roomID, LocalDateTime startDate, LocalDateTime endDate)
@@ -51,7 +51,7 @@ public class ReservationService {
         List<Reservation> reservations = reservationRepository.findReservationsByRoomID(roomID);
         for(Reservation reservation : reservations)
         {
-            if(doesNotIntersect(startDate, endDate, reservation.getStartDate(), reservation.getEndDate()))
+            if(!doesNotIntersect(startDate, endDate, reservation.getStartDate(), reservation.getEndDate()))
             {
                 return false;
             }

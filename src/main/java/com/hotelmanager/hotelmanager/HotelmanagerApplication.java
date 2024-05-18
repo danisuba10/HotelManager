@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Optional;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.hotelmanager.service", "com.hotelmanager.repo"})
+@ComponentScan(basePackages = {"com.hotelmanager.service", "com.hotelmanager.repo", "com.hotelmanager.controller"})
 @EntityScan(basePackages = {"com.hotelmanager.domain"})
 @EnableJpaRepositories(basePackages = {"com.hotelmanager.repo"})
 public class HotelmanagerApplication {
@@ -43,8 +43,14 @@ public class HotelmanagerApplication {
 		reservationService.reserve(1, LocalDateTime.now().minusDays(2), LocalDateTime.now().plusDays(2));
 		reservationService.reserve(2, LocalDateTime.now(), LocalDateTime.now().plusMinutes(60));
 		List<Room> availableRooms = roomService.findAvailableByHotelId(hotel.get().getId(), LocalDateTime.now(), LocalDateTime.now().plusDays(1));
-		reservationService.cancel(1);
-		reservationService.cancel(2);
+		try{
+			reservationService.cancel(1);
+		}
+		catch(Exception e){System.out.println(e);}
+		try{
+			reservationService.cancel(2);
+		}
+		catch(Exception e){System.out.println(e);}
 		availableRooms = roomService.findAvailableByHotelId(hotel.get().getId(), LocalDateTime.now(), LocalDateTime.now().plusDays(1));
 		float userLat, userLong;
 		userLat = 46.7730202f;
@@ -52,6 +58,7 @@ public class HotelmanagerApplication {
 		int distance = DistanceService.distance(userLat, userLong, hotel.get().getLatitude(), hotel.get().getLongitude());
 		int a = 0;
 		userService.test_distanceFilter();
+		//userService.test_review();
 	}
 
 
