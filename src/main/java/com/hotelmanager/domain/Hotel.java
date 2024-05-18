@@ -10,24 +10,30 @@ import java.util.Set;
 public class Hotel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private float latitude;
     private float longitude;
     @Transient
-    private HashSet<Integer> roomIDS;
-    @Transient
-    private Set<Room> rooms;
+    Set<Room> rooms;
 
-    public Hotel(int id, String name, float latitude, float longitude, HashSet<Integer> roomIDS, HashSet<Room> rooms)
+    public Hotel(int id, String name, float latitude, float longitude, HashSet<Room> rooms)
     {
         this.id = id;
         this.name = name;
         this.latitude = latitude;
         this.longitude = longitude;
-        this.roomIDS = roomIDS;
         this.rooms = rooms;
+    }
+
+    public Hotel(int id, String name, float latitude, float longitude)
+    {
+        this.id = id;
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.rooms = new HashSet<>();
     }
 
     public Hotel() {
@@ -37,7 +43,6 @@ public class Hotel {
         this.latitude = 0f;
         this.longitude = 0f;
         this.rooms = new HashSet<>();
-        this.roomIDS = new HashSet<>();
     }
 
     public int getId()
@@ -86,15 +91,6 @@ public class Hotel {
     public void setRooms(HashSet<Room> rooms)
     {
         this.rooms = rooms;
-    }
-
-    public Set<Integer> getRoomIds(){
-        return this.roomIDS;
-    }
-
-    public void setRoomIds(HashSet<Integer> roomIDS)
-    {
-        this.roomIDS = roomIDS;
     }
 
 }

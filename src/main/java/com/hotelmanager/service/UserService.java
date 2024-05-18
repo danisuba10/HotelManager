@@ -1,6 +1,7 @@
 package com.hotelmanager.service;
 
 import com.hotelmanager.domain.Hotel;
+import com.hotelmanager.domain.Reservation;
 import com.hotelmanager.domain.Review;
 import com.hotelmanager.domain.Room;
 import com.hotelmanager.exception.ReservationCancelException;
@@ -60,6 +61,10 @@ public class UserService {
     public List<Review> getReviewsForHotel(int hotelID)
     {
         return reviewService.getReviewsForHotel(hotelID);
+    }
+
+    public List<Reservation> getReservations(){
+        return this.reservationService.getReservations();
     }
 
     public void test_distanceFilter()

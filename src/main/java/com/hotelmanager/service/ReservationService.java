@@ -9,12 +9,23 @@ import org.springframework.stereotype.Service;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class ReservationService {
     @Autowired
     ReservationRepository reservationRepository;
+
+    public List<Reservation> getReservations(){
+        List<Reservation> result = new ArrayList<>();
+        Iterable<Reservation> iter = reservationRepository.findAll();
+        for(Reservation reservation : iter)
+        {
+            result.add(reservation);
+        }
+        return result;
+    }
 
     public void reserve(int roomID, LocalDateTime startDate, LocalDateTime endDate)
     {

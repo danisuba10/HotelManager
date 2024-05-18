@@ -35,12 +35,13 @@ public class jsonService {
                 this.servicesSingleton.getHotelService().add(hotel);
                 for(Room room : hotel.getRooms())
                 {
-                    hotel.getRoomIds().add(room.getId());
+                    //hotel.getRoomIds().add(room.getId());
                     if(this.servicesSingleton.getRoomHotelRelationService().existsByHotelIDAndRoomNumber(hotel.getId(), room.getRoomNumber()))
                     {
                         this.servicesSingleton.getRoomService().add(room);
                         this.servicesSingleton.getRoomHotelRelationService().add(hotel, room);
                     }
+
                 }
 
             }

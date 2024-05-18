@@ -38,29 +38,5 @@ public class HotelmanagerApplication {
 		jsonService jsonService = new jsonService(servicesSingleton);
 		jsonService.read("src/main/resources/input.json");
 
-		Optional<Hotel> hotel = hotelService.findById(1);
-		List<Room> room = roomService.findByHotelID(3);
-		reservationService.reserve(1, LocalDateTime.now().minusDays(2), LocalDateTime.now().plusDays(2));
-		reservationService.reserve(2, LocalDateTime.now(), LocalDateTime.now().plusMinutes(60));
-		List<Room> availableRooms = roomService.findAvailableByHotelId(hotel.get().getId(), LocalDateTime.now(), LocalDateTime.now().plusDays(1));
-		try{
-			reservationService.cancel(1);
-		}
-		catch(Exception e){System.out.println(e);}
-		try{
-			reservationService.cancel(2);
-		}
-		catch(Exception e){System.out.println(e);}
-		availableRooms = roomService.findAvailableByHotelId(hotel.get().getId(), LocalDateTime.now(), LocalDateTime.now().plusDays(1));
-		float userLat, userLong;
-		userLat = 46.7730202f;
-		userLong = 23.6208637f;
-		int distance = DistanceService.distance(userLat, userLong, hotel.get().getLatitude(), hotel.get().getLongitude());
-		int a = 0;
-		userService.test_distanceFilter();
-		//userService.test_review();
 	}
-
-
-
 }

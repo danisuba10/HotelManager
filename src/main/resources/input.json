@@ -64,5 +64,19 @@
 "isAvailable": true
 }
 ]
+},
+{
+"id": 65,
+"name": "Hotel Privo",
+"latitude": 46.53487112203031,
+"longitude": 24.555880446269178,
+"rooms": [
+{
+"roomNumber": 76,
+"type": 1,
+"price": 350,
+"isAvailable": true
+}
+]
 }
 ]
