@@ -14,4 +14,6 @@ public interface HotelRepository extends CrudRepository<Hotel,Integer>
                     "WHERE rhl.hotelRoomID = :roomID"
     )
     public Hotel getHotelByRoom(int roomID);
+
+    public Long countHotelByNameAndLatitudeAndLongitude(String name, float lat, float lon);
 }

@@ -6,6 +6,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hotelmanager.domain.Hotel;
 import com.hotelmanager.domain.Room;
 import jakarta.servlet.ServletContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,8 +36,11 @@ public class jsonService {
                 for(Room room : hotel.getRooms())
                 {
                     hotel.getRoomIds().add(room.getId());
-                    this.servicesSingleton.getRoomService().add(room);
-                    this.servicesSingleton.getRoomHotelRelationService().add(hotel, room);
+                    if(this.servicesSingleton.getRoomHotelRelationService().existsByHotelIDAndRoomNumber(hotel.getId(), room.getRoomNumber()))
+                    {
+                        this.servicesSingleton.getRoomService().add(room);
+                        this.servicesSingleton.getRoomHotelRelationService().add(hotel, room);
+                    }
                 }
 
             }
