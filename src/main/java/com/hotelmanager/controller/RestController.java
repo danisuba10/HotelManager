@@ -58,7 +58,7 @@ public class RestController {
         }
     }
 
-    @GetMapping("/review/add")
+    @PostMapping("/review/add")
     public ResponseEntity<String> addReview(@RequestParam int roomID, @RequestParam int points,
                                             @RequestParam String reviewText)
     {
