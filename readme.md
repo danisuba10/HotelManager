@@ -2,6 +2,18 @@
 
 [https://www.youtube.com/watch?v=dQw4w9WgXcQ&t](URL)
 
+## Description
+
+A Java backend for managing hotels, created using the Spring Boot framework.<br><br>
+Its main purpose is to return all the hotels nearby to the user's location withing a specific radius. After which the user can choose a hotel, for which all free rooms are returned for the given timeframe.<br><br>
+The rooms can get reserved, the reservation can be cancelled if the user asks for that more than 2 hours before the start date of the reservation.
+<br><br>
+After cancelling a room, reviews can be added, which are helpful when checking reviews of a specific hotel
+
+## Stack used
+- **Spring Boot Java framework**
+- **Oracle MySQL**
+
 ## Backend
 
 ## APIs
