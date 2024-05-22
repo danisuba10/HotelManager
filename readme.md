@@ -50,7 +50,7 @@
 
 ### Add Review
 - **Endpoint**: `/review/add`
-- **Method**: `GET`
+- **Method**: `POST`
 - **Params**:
 - `roomID` (int): ID of the room
 - `points` (int): Rating points
